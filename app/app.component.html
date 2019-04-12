@@ -1,0 +1,71 @@
+ 
+<form action="">
+  <label for="">Date First</label>
+  <input type="date" [ngModel]="DateFirst" >
+  <label for="">Date Last</label>
+  <input type="date" [ngModel]="DateLast" >
+  <button (click)="BuscarApi()" >Filter</button>
+</form>
+
+
+<table>
+  <tr>
+    <th>Nfe issuing time spent (in minutes)</th>
+    <th>Number of Invoices</th>
+    <th>Percentage</th>
+  </tr>
+  <tbody>
+    <tr>
+      <td>textinho<td>
+      <td>150<td>
+      <td>75%<td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<h3>Vertical bar inside div and without view attribute</h3>
+  <div class="charts">
+    <ngx-charts-bar-vertical
+      [scheme]="colorScheme"
+      [results]="single"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical>
+  </div>
+
+
+<h3>Vertical bar chart without view attribute and without div</h3>
+<ngx-charts-bar-vertical
+      [scheme]="colorScheme"
+      [results]="single"
+      [xAxis]="showXAxis"
+      [yAxis]="showYAxis"
+      [legend]="showLegend"
+      [showXAxisLabel]="showXAxisLabel"
+      [showYAxisLabel]="showYAxisLabel"
+      [xAxisLabel]="xAxisLabel"
+      [yAxisLabel]="yAxisLabel"
+      (select)="onSelect($event)">
+    </ngx-charts-bar-vertical>
+<div class="charts">
+     <ngx-charts-pie-chart
+      [scheme]="colorScheme"
+      [results]="single"
+      [legend]="showLegend"
+      [explodeSlices]="explodeSlices"
+      [labels]="showLabels"
+      [doughnut]="doughnut"
+      [gradient]="gradient"
+      (select)="onSelect($event)">
+    </ngx-charts-pie-chart>
+</div>
+
+Test
